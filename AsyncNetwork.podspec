@@ -21,8 +21,11 @@ Pod::Spec.new do |s|
 
   s.osx.platform     = :osx, '10.7'
   s.ios.platform     = :ios, '6.0'
+  s.tvos.platform     = :tvos, '9.0'
   s.ios.deployment_target = "6.0"
   s.osx.deployment_target = "10.7"
+  s.tvos.deployment_target = "9.0"
+
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -30,5 +33,6 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.ios.frameworks = 'Foundation', 'Security', 'CFNetwork'
   s.osx.frameworks = 'Foundation', 'CFNetwork'
-  s.dependency 'CocoaAsyncSocket'
+  s.tvos.frameworks = 'Foundation', 'Security', 'CFNetwork'
+  # s.dependency 'CocoaAsyncSocket'
 end
